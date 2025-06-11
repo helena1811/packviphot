@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>🔥 Desbloqueie o Conteúdo Secreto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404941070782943'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=1404941070782943&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .quiz-box {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255,0,100,0.4);
+    }
+    button {
+      background: #ff0066;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      width: 80%;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-box">
+    <h2>🚨 Atenção: Essa gata de <span id="cidade">sua cidade</span> tá vendendo packs secretos 🔥</h2>
+    <img src="https://i.imgur.com/v1TfN98.jpeg" alt="Modelo sexy">
+
+    <p>Responda 2 perguntas rápidas para liberar o conteúdo +18 exclusivo dela:</p>
+
+    <p><b>1. Você tem mais de 18 anos?</b></p>
+    <button onclick="proximaPergunta()">Sim</button>
+
+    <div id="pergunta2" style="display:none;">
+      <p><b>2. Você quer ver os nudes exclusivos dela por R$29,90 via Pix?</b></p>
+      <button onclick="finalizaQuiz()">Sim, quero ver 🔥</button>
+    </div>
+
+    <div id="cta" style="display:none;">
+      <h3>✅ Pronto! Clique abaixo para liberar o acesso:</h3>
+      <a href="https://teu-link-aqui.com" target="_blank">
+        <button style="background: limegreen;">🔓 Liberar Conteúdo VIP</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function proximaPergunta() {
+      document.getElementById('pergunta2').style.display = 'block';
+    }
+
+    function finalizaQuiz() {
+      document.getElementById('cta').style.display = 'block';
+    }
+
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('cidade').innerText = data.city;
+      });
+  </script>
+</body>
+</html>
